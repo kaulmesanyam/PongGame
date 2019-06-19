@@ -33,6 +33,7 @@ const ball = new Ball;
 ball.pos.x = 100;
 ball.pos.y = 50;
 
+
 context.fillStyle = '#000';
 context.fillRect(0, 0, canvas.width, canvas.height);
 
