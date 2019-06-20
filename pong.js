@@ -99,8 +99,8 @@ class Pong
 	drawRect(rect)
 	{
 		this._context.fillStyle = '#fff';
-		this._context.fillRect(rect.pos.x, 
-							rect.pos.y, rect.size.x, rect.size.y);
+		this._context.fillRect(rect.left, 
+							rect.top, rect.size.x, rect.size.y);
 	}
 	update(dt) {
 		this.ball.pos.x += this.ball.vel.x * dt;
