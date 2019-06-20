@@ -99,7 +99,7 @@ class Pong
 	drawRect(rect)
 	{
 		this._context.fillStyle = '#fff';
-		this._context.fillRect(rect.left, 
+		this._context.fillRect(rect.pos.x, 
 							rect.top, rect.size.x, rect.size.y);
 	}
 	update(dt) {
