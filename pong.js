@@ -123,3 +123,7 @@ class Pong
 
 const canvas = document.getElementById('pong');
 const pong =  new Pong(canvas);
+
+canvas.addEventListener('mousemove', event => {
+	pong.players[0].pos.y = event.offsetY;
+});
