@@ -71,6 +71,12 @@ class Pong
 			new Player,
 		];
 
+		this.players[0].pos.x = 20;
+		this.players[1].pos.x = this._canvas.width - 40;
+		this.players.forEach(player => {
+			player.pos.y = this._canvas.height / 2;
+		});
+
 		let lastTime;
 		const callback =  (millis) => {
 			if (lastTime) {
