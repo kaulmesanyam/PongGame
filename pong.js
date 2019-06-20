@@ -87,6 +87,14 @@ class Pong
 		};
 		callback();
 	}
+	collide(player, ball) 
+	{
+		if (player.left < ball.right && player.right > ball.left && 
+			player.top < ball.bottom && player.bottom > ball.top) {
+			ball.vel.x = -ball.vel.x;
+		}
+	}
+
 	draw()
 	{
 		this._context.fillStyle = '#000';
@@ -116,6 +124,8 @@ class Pong
 		}
 
 	this.players[1].pos.y = this.ball.pos.y;
+
+	this.players.forEach(player => this.collide(player, this.ball));
 
 	this.draw();
 	}
