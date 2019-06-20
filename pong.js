@@ -17,7 +17,7 @@ class Rect
 	}
 	get left()
 	{
-		return this.pos.x - this.pos.x / 2;
+		return this.pos.x - this.size.x / 2;
 	}
 	get right()
 	{
@@ -25,7 +25,7 @@ class Rect
 	}
 	get top()
 	{
-		return this.pos.y - this.pos.y / 2;
+		return this.pos.y - this.size.y / 2;
 	}
 	get bottom()
 	{
@@ -99,7 +99,7 @@ class Pong
 	drawRect(rect)
 	{
 		this._context.fillStyle = '#fff';
-		this._context.fillRect(rect.pos.x, 
+		this._context.fillRect(rect.left, 
 							rect.top, rect.size.x, rect.size.y);
 	}
 	update(dt) {
